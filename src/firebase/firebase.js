@@ -1,4 +1,4 @@
-import * as firebase from 'firebase'; // taking all named exports and importing into firebase variable
+import * as firebase from 'firebase' // taking all named exports and importing into firebase variable
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -7,15 +7,13 @@ const config = {
   projectId: process.env.FIREBASE_PROJECT_ID,
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
-};
+}
 
-firebase.initializeApp(config);
+firebase.initializeApp(config)
 
-const database = firebase.database();
+const database = firebase.database()
 
-export { firebase, database as default };
-
-
+export { firebase, database as default }
 
 // // child_removed event (when a child from an 'array' is removed from database)
 // database.ref('expenses').on('child_removed', (snapshot) => {
@@ -31,10 +29,6 @@ export { firebase, database as default };
 // database.ref('expenses').on('child_added', snapshot => {
 //   console.log(snapshot.key, snapshot.val());
 // });
-
-
-
-
 
 // // database.ref('expenses')
 // //   .once('value')
@@ -66,16 +60,12 @@ export { firebase, database as default };
 // //   description: 'New Mouse'
 // // });
 
-
-
-
 // // database.ref('notes').set(notes);
 
 // // database.ref().on('value', (snapshot) => {
 // //   const data = snapshot.val();
 // //   console.log(`${data.name} is a ${data.job.title} at ${data.job.company}`);
 // // })
-
 
 // // // fetching data once
 // // database.ref('location/city')
@@ -120,6 +110,3 @@ export { firebase, database as default };
 // // }).catch((e) => {
 // //   console.log('Remove failed: ', e.message);
 // // })
-
-
-

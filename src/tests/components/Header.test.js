@@ -1,11 +1,9 @@
 // we need React cause we will write JSX
-import React from 'react';
-import { shallow } from 'enzyme';
-import Header from '../../components/Header';
-
+import React from 'react'
+import { shallow } from 'enzyme'
+import Header from '../../components/Header'
 
 test('should render Header correctly', () => {
-  const wrapper = shallow(<Header />);
-  expect(wrapper).toMatchSnapshot();
-});
-
+  const wrapper = shallow(<Header />)
+  expect(wrapper).toMatchSnapshot()
+})

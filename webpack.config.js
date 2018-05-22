@@ -1,21 +1,19 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 if (process.env.NODE_ENV === 'test') {
-  require('dotenv').config({ path: '.env.test' });
+  require('dotenv').config({ path: '.env.test' })
 } else if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config({ path: '.env.development' });
+  require('dotenv').config({ path: '.env.development' })
 }
-
 
 module.exports = (env) => {
   // checking if production mode
-  const isProduction = env === 'production';
-  const CSSExtract = new ExtractTextPlugin('styles.css');
+  const isProduction = env === 'production'
+  const CSSExtract = new ExtractTextPlugin('styles.css')
 
   return {
     entry: './src/app.js',
@@ -66,5 +64,4 @@ module.exports = (env) => {
       publicPath: '/dist/'
     }
   }
-};
-
+}
