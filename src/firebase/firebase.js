@@ -13,7 +13,9 @@ firebase.initializeApp(config)
 
 const database = firebase.database()
 
-export { firebase, database as default }
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+
+export { firebase, googleAuthProvider, database as default }
 
 // // child_removed event (when a child from an 'array' is removed from database)
 // database.ref('expenses').on('child_removed', (snapshot) => {
