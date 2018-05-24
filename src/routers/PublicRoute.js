@@ -9,13 +9,12 @@ export const PublicRoute = ({
 }) => (
   <Route {...rest} component={(props) => (
     isAuthenticated ? (
-      <Redirect to="/dashboard" />
-
+      <Redirect to='/dashboard' />
 
     ) : (
       <Component {...props} />
     )
-  )}/>
+  )} />
 )
 
 const mapStateToProps = (state) => ({
